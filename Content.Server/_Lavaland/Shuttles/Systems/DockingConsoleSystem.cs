@@ -221,6 +221,12 @@ public sealed class DockingConsoleSystem : SharedDockingConsoleSystem
         EntityUid? largestGrid = null;
         var largestSize = 0f;
 
+        if (_station.GetStationInMap(map) is {} station)
+        {
+            // prevent picking vgroid and stuff
+            return _station.GetLargestGrid(Comp<StationDataComponent>(station));
+        }
+
         var query = EntityQueryEnumerator<MapGridComponent, TransformComponent>();
         while (query.MoveNext(out var gridUid, out var grid, out var xform))
         {
