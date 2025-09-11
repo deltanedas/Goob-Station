@@ -248,7 +248,7 @@ public abstract partial class SharedBuckleSystem
 
     private void AddStrapVerbs(EntityUid uid, StrapComponent component, GetVerbsEvent<InteractionVerb> args)
     {
-        if (args.Hands == null || !args.CanAccess || !args.CanInteract || !component.Enabled)
+        if (args.Hands == null || !args.CanAccess || !args.CanInteract || !component.Enabled || component.DisableVerbs) // Goobstation - add DisableVerbs
             return;
 
         // Note that for whatever bloody reason, buckle component has its own interaction range. Additionally, this
@@ -327,6 +327,11 @@ public abstract partial class SharedBuckleSystem
     {
         if (!args.CanAccess || !args.CanInteract || !component.Buckled)
             return;
+
+        // <Goobstation>
+        if (CompOrNull<StrapComponent>(component.BuckledTo)?.DisableVerbs == true)
+            return;
+        // </Goobstation>
 
         if (!CanUnbuckle((uid, component), args.User, false))
             return;

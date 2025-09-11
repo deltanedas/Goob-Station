@@ -225,6 +225,12 @@ public sealed partial class StrapComponent : Component
     /// </summary>
     [DataField]
     public bool BlockMovement = true;
+
+    /// <summary>
+    /// Goobstation - disables all buckle related verbs for this entity.
+    /// </summary>
+    [DataField]
+    public bool DisableVerbs;
     // </Goobstation>
 
     // WD EDIT START

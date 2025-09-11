@@ -1,0 +1,20 @@
+<MuleWranglerUiFragment xmlns="https://spacestation14.io"
+        xmlns:pda="using:Content.Client.PDA"
+        Orientation="Vertical"
+        VerticalExpand="True">
+    <PanelContainer>
+        <GridContainer Name="MainContainer" Columns="2">
+            <GridContainer Name="ButtonContainer" SetWidth="250"/>
+	        <BoxContainer>
+    	        <GridContainer Rows="2">
+        	        <Label Name="MuleStatusLabel" Text="{Loc 'mule-wrangler-status'}"/>
+            	    <GridContainer Columns="2">
+                	    <Label Name="SelectedMuleLabel" Text="{Loc 'mule-wrangler-selected'}"/>
+	                    <Label Name="IdentifyMuleLabel"/>
+	                </GridContainer>
+    	        </GridContainer>
+            </BoxContainer>
+        </GridContainer>
+        <GridContainer Name="MuleListContainer" Visible="False"/>
+    </PanelContainer>
+</MuleWranglerUiFragment>
