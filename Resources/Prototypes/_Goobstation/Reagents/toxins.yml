@@ -334,3 +334,28 @@
           shouldHave: false
         probability: 0.05
         paralyzeTime: 2
+
+- type: reagent
+  id: Microplastics
+  name: reagent-name-microplastics
+  group: Toxins
+  desc: reagent-desc-microplastics
+  physicalDesc: reagent-physical-desc-grainy
+  flavor: lego
+  color: "#b0b3c0"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        - !type:OrganType
+          type: Yowie
+          shouldHave: false
+        - !type:ReagentThreshold
+          min: 5
+        scaleByQuantity: true
+        damage:
+          types:
+            Cellular: 0.05
+      - !type:AdjustReagent # microplastics last a very long time
+        reagent: Microplastics
+        amount: 0.49

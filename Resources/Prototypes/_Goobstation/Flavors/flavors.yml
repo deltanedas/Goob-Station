@@ -115,3 +115,8 @@
   id: chuddy
   flavorType: Base
   description: flavor-base-chuddy
+
+- type: flavor
+  id: lego
+  flavorType: Complex
+  description: flavor-complex-lego

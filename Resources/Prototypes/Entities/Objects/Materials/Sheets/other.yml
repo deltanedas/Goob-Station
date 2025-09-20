@@ -239,6 +239,8 @@
           Quantity: 5
         - ReagentId: Phosphorus
           Quantity: 5
+        - ReagentId: Microplastics # Goobstation
+          Quantity: 0.1
         canReact: false
 
 - type: entity

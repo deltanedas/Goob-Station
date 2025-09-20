@@ -25,3 +25,6 @@ reagent-desc-sarin = A brutal neurotoxin that creates nasty caustic burns on con
 
 reagent-name-nevcottapowder = nevcotta powder
 reagent-desc-nevcottapowder = A highly toxic powder created from grinding the bark of the nevcotta tree. Used in the creation of a classified chemical.
+
+reagent-name-microplastics = microplastics
+reagent-desc-microplastics = Microscopic particles of LDPE, as abdundant as DNA in humans since the 21st century.
